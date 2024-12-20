@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-slate-900">
+
+  <div class="w-full fixed py-5 top-0 left-0 md:h-fit bg-slate-900 z-30 shadow-2xl">
+    <div class="w-full flex items-center justify-between">
+      <img class="w-20 ml-6 md:w-28 " src="Logo.png" alt="logo">
+      <div
+        class="h-12 md:h-20 lg:h-16 items-center hidden lg:flex md:flex justify-between px-10 rounded-l-full bg-gradient-to-r from-orange-700 to-violet-500">
+        <ul class="flex items-center justify-center">
+          <li class="list after list-none mx-5 font-mono text-sm cursor-pointer">Home</li>
+          <li class="list list-none mx-5 font-mono text-sm cursor-pointer">Wallpapers</li>
+          <li class="list list-none mx-5 font-mono text-sm cursor-pointer">Premium</li>
+          <li class="list list-none mx-5 font-mono text-sm cursor-pointer">About</li>
+        </ul>
+        <div class="py-2 px-4 ml-6 cursor-pointer hover:scale-110 duration-300 rounded-full bg-pink-400">JOIN</div>
+      </div>
+      <div class="flex items-center justify-center md:hidden lg:hidden">
+        <div
+          class="py-2 px-4 mr-4 flex md:hidden lg:hidden cursor-pointer hover:scale-110 duration-300 rounded-full bg-pink-500">
+          JOIN</div>
+        <i class="menuIcon fa-solid fa-bars flex md:hidden lg:hidden cursor-pointer text-pink-500 text-3xl mr-7"
+          onclick="showMenu()"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    class="mobileMenu h-screen z-30 fixed pt-28 px-10 hidden top-0 right-0 w-4/5 bg-gradient-to-t from-violet-900 to-slate-900">
+    <div class="flex z-20 flex-col items-start">
+      <ul class="flex flex-col items-start">
+        <li class="list-none text-violet-500 font-mono hover:text-pink-400 duration-300 text-lg py-4 cursor-pointer">
+          Home</li>
+        <li class="list-none text-violet-500 font-mono hover:text-pink-400 duration-300 text-lg py-4 cursor-pointer">
+          Wallpapers</li>
+        <li class="list-none text-violet-500 font-mono hover:text-pink-400 duration-300 text-lg py-4 cursor-pointer">
+          Premium</li>
+        <li class="list-none text-violet-500 font-mono hover:text-pink-400 duration-300 text-lg py-4 cursor-pointer">
+          About</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- hero section -->
+  <section class="relative h-screen flex flex-col items-center justify-center bg-slate-900 text-white overflow-hidden">
+
+    <!-- Content Container -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-5">
+      <!-- Animated Gradient Heading -->
+      <h1
+        class="text-5xl md:text-7xl font-extrabold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-500">
+        Your Device, Your Style
+      </h1>
+
+      <!-- Subtext -->
+      <p class="text-sm md:text-xl text-slate-300 font-mono flex items-start mb-8 max-w-3xl">
+        Browse through a collection of breathtaking wallpapers designed to bring your screens to life. Choose from
+        thousands of high-quality images, curated just for you.
+      </p>
+
+      <!-- Call-to-Action Buttons -->
+      <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid gap-10 mt-5">
+        <a href="#gallery"
+          class="log2 bg-orange-500 sm:w-full hover:bg-orange-600 text-black font-mono py-3 px-6 shadow-lg transition-transform transform hover:scale-105">
+          Browse Wallpapers
+        </a>
+        <a href="#about"
+          class="log1 bg-pink-500 sm:w-full hover:bg-pink-600 text-black font-mono py-3 px-6 shadow-lg transition-transform transform hover:scale-105">
+          Learn More
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Floating Elements for Creativity -->
+    <div class="absolute top-10 left-10 w-24 h-24 bg-yellow-400 rounded-full blur-3xl opacity-30"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-pink-500 rounded-full blur-2xl opacity-20"></div>
+    <div class="absolute top-28 left-10 w-24 h-24 bg-yellow-400 rounded-full blur-3xl opacity-30"></div>
+    <div class="absolute bottom-10 right-20 w-32 h-32 bg-pink-500 rounded-full blur-2xl opacity-20"></div>
+  </section>
+
+  <!-- options -->
+  <div
+    class="w-full h-14 px-10 flex sticky top-24 md:top-28 lg:top-28 z-30 items-center justify-evenly overflow-x-scroll overflow-y-hidden whitespace-nowrap hide-scrollbar cursor-grab bg-violet-600">
+    <li class="list-none cursor-pointer h-14 flex items-center font-mono px-4 hover:bg-violet-500 duration-300 mx-8">
+      Natural</li>
+    <li class="list-none cursor-pointer h-14 flex items-center font-mono px-4 hover:bg-violet-500 duration-300 mx-8">
+      Cars</li>
+    <li class="list-none cursor-pointer h-14 flex items-center font-mono px-4 hover:bg-violet-500 duration-300 mx-8">
+      Art</li>
+    <li class="list-none cursor-pointer h-14 flex items-center font-mono px-4 hover:bg-violet-500 duration-300 mx-8">
+      Cool</li>
+    <li class="list-none cursor-pointer h-14 flex items-center font-mono px-4 hover:bg-violet-500 duration-300 mx-8">
+      Sky</li>
+    <li class="list-none cursor-pointer h-14 flex items-center font-mono px-4 hover:bg-violet-500 duration-300 mx-8">
+      Painting</li>
+    <li class="list-none cursor-pointer h-14 flex items-center font-mono px-4 hover:bg-violet-500 duration-300 mx-8">
+      Cartoon</li>
+  </div>
+
+  <!-- image gallery -->
+  <div class="p-4">
+    <div class="gallery grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyDon9ZneDWU0EpB9I7BJNwNUKXqJaFgZJI",
+      authDomain: "wallpaper-database-c0dff.firebaseapp.com",
+      projectId: "wallpaper-database-c0dff",
+      storageBucket: "wallpaper-database-c0dff.firebasestorage.app",
+      messagingSenderId: "953829728542",
+      appId: "1:953829728542:web:a8e4bd4ce4ddaa5570e90f",
+    };
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const colRef = collection(db, "wallpapers");
+  
+      let allWallpapers = [];
+  
+      function download(imageUrl) {
+        const link = document.createElement("a");
+        link.href = imageUrl;
+        link.download = "downloaded-wallpaper.jpg";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+  
+      function filterWallpapers(category) {
+        const filteredWallpapers =
+          category === "All"
+            ? allWallpapers
+            : allWallpapers.filter((wallpaper) =>
+                wallpaper.name.toLowerCase().includes(category.toLowerCase())
+              );
+        displayWallpapers(filteredWallpapers);
+        console.log(filteredWallpapers);
+        
+      }
+  
+      function displayWallpapers(wallpapers) {
+        const gallery = document.querySelector(".gallery");
+        if (!gallery) {
+          console.error("Gallery element not found!");
+          return;
+        }
+        gallery.innerHTML = "";
+        wallpapers.forEach((wallpaper) => {
+          const wallDiv = document.createElement("div");
+          wallDiv.classList.add("wallpaper-item");
+          wallDiv.innerHTML = `
+            <div class="relative h-full">
+              <img src="${wallpaper.image}" alt="${wallpaper.name}" class="w-full h-full rounded-lg shadow-md">
+              <i class="fa-solid fa-circle-down absolute bottom-3 text-3xl cursor-pointer text-pink-500 right-3" data-image="${wallpaper.image}"></i>
+            </div>
+          `;
+          gallery.appendChild(wallDiv);
+        });
+  
+        const downloadButtons = document.querySelectorAll("i");
+        downloadButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const imageUrl = button.getAttribute("data-image");
+            download(imageUrl);
+          });
+        });
+      }
+  
+      getDocs(colRef)
+        .then((snapshot) => {
+          snapshot.forEach((doc) => {
+            const data = doc.data();
+            allWallpapers.push({
+              image: data.image,
+              name: data.name,
+            });
+          });
+  
+          displayWallpapers(allWallpapers);
+        })
+        .catch((error) => {
+          console.error("Error fetching wallpapers: ", error);
+        });
+  
+      const filterOptions = document.querySelectorAll(".options li");
+      filterOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          filterWallpapers(option.innerHTML);
+        });
+      });
+    });
+  </script>
+  
+
+  <script src="script.js"></script>
+</body>
+
+</html>

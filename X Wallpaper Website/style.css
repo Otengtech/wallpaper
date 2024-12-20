@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.list {
+  position: relative;
+  padding: 5px 0px;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.list.after::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 2px;
+  color: rgb(236, 6, 198);
+  background-color: rgb(236, 6, 198);
+  transition: width 0.3s ease-in-out;
+}
+.list.after {
+  color: rgb(236, 6, 198);
+}
+
+.list::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(236, 6, 198);
+  transition: width 0.3s ease-in-out;
+}
+
+.log1 {
+  position: relative;
+  transition-duration: 0.4s;
+  z-index: 0;
+}
+.log1::after {
+  content: "";
+  padding: 10px 0 0 0;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgb(255, 65, 97);
+  z-index: -1;
+  transition: 0.4s;
+}
+.log1:hover::after {
+  padding: 10px 20px 10px 20px;
+  height: 100%;
+  width: 100%;
+}
+.log1:hover {
+  color: black;
+}
+
+.log2 {
+  position: relative;
+  transition-duration: 0.4s;
+  z-index: 0;
+}
+.log2::after {
+  content: "";
+  padding: 10px 0 0 0;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: orangered;
+  z-index: -1;
+  transition: 0.4s;
+}
+.log2:hover::after {
+  padding: 10px 20px 10px 20px;
+  height: 100%;
+  width: 100%;
+}
+.log2:hover {
+  color: black;
+}
